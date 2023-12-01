@@ -1,0 +1,90 @@
+[
+    {
+        
+        "id": 1,
+        "urunadi": "Ananas",
+        "fiyat": "60000",
+        "imgurl": "images/ananas.jpg"
+    },
+    {
+     
+        "id": 2,
+        "urunadi": "Bilgisayar",
+        "fiyat": "40000",
+        "imgurl": "images/bilgisayar.jpg"
+    },
+    {
+     
+        "id": 3,
+        "urunadi": "Coca Cola",
+        "fiyat": "1000",
+        "imgurl": "images/cocacola.jpg"
+    },
+    {
+     
+        "id": 4,
+        "urunadi": "Fotoğraf Makinesi",
+        "fiyat": "5000",
+        "imgurl": "images/fotoğrafmakinesi.jpg"
+    },
+    {
+        
+        "id": 5,
+        "urunadi": "Hafıza kartı",
+        "fiyat": "1000",
+        "imgurl": "images/hafizakarti.jpg"
+    },
+    {
+     
+        "id": 6,
+        "urunadi": "Makyaj Malzemesi",
+        "fiyat": "4000",
+        "imgurl": "images/makyajmalzemesi.jpg"
+    },
+    {
+     
+        "id": 7,
+        "urunadi": "Telefon",
+        "fiyat": "5000",
+        "imgurl": "images/telefon.jpg"
+    },
+    {
+     
+        "id": 8,
+        "urunadi": "Watch",
+        "fiyat": "40000",
+        "imgurl": "images/watch.jpg"
+    },
+    {
+     
+        "id": 9,
+        "urunadi": "Dondurma",
+        "fiyat": "400",
+        "imgurl": "images/dondurma.jpg"
+    },
+    {
+     
+        "id": 10,
+        "urunadi": "Pizza",
+        "fiyat": "700",
+        "imgurl": "images/pizza.jpg"
+    },
+    {
+     
+        "id": 11,
+        "urunadi": "Kulaklık",
+        "fiyat": "400",
+        "imgurl": "images/kulaklık.jpg"
+    },
+    {
+     
+        "id": 12,
+        "urunadi": "Org",
+        "fiyat": "100",
+        "imgurl": "images/org.jpg"
+    }
+ 
+ 
+
+
+]

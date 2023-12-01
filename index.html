@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch ve forEach Örneği</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<p class="alert">FETCH FROM A JSON FILE</p>
+
+<h1 class="urunler">ÜRÜNLER</h1>
+
+<p class="bul">Bulmak istediğiniz ürünün ismini kutuya yazınız.</p>
+
+<input id="search" type="text" oninput="fetchproduct()">
+
+<div id="container"></div>
+
+<script>
+    fetch('list.json')
+        .then(response => response.json())
+        .then(data => {
+            const container = document.getElementById('container');
+
+            data.forEach(post => {
+                const postdiv = document.createElement('div');
+                postdiv.classList.add("postdiv");
+
+                postdiv.innerHTML = `
+                    <img src=${post.imgurl} />
+                    <h2>${post.urunadi}</h2>
+                    <h3>${post.fiyat + " TL"}</h3>
+                `;
+
+                container.appendChild(postdiv);
+            });
+        })
+        .catch(error => console.error('Error:', error));
+
+        // FİLTRELEME 
+
+    function fetchproduct() {
+        fetch('list.json')
+            .then(response => response.json())
+            .then(data => {
+                const container = document.getElementById('container');
+                container.innerHTML = "";
+
+                let urunadidegeri = document.getElementById("search").value.toLowerCase();
+
+                let filteredproducts = data.filter(product => product.urunadi.toLowerCase().includes(urunadidegeri));
+
+                filteredproducts.forEach(post => {
+                    const postdiv = document.createElement('div');
+                    postdiv.classList.add("postdiv");
+
+                    postdiv.innerHTML = `
+                        <img src=${post.imgurl} />
+                        <h2>${post.urunadi}</h2>
+                        <h3>${post.fiyat + " TL"}</h3>
+                    `;
+
+                    container.appendChild(postdiv);
+                });
+            })
+            .catch(error => console.error('Error:', error));
+    }
+</script>
+
+</body>
+</html>
